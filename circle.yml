@@ -1,0 +1,13 @@
+machine:
+ java:
+  version: oraclejdk7
+  version: oraclejdk8
+  
+  
+dependencies:
+   override:
+    - mvn clean verify
+    
+test:
+  override:
+    - bash <(curl -s https://codecov.io/bash)  
